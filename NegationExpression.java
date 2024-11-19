@@ -18,4 +18,15 @@ public class NegationExpression
       return -opnd.evaluate(bindings);
    }
 
+   public Expression simplifyAdditiveIdentity() {
+      return this;
+   }
+
+   public Expression simplifyMultiplicativeIdentity() {
+      return this;
+   }
+
+   public Expression simplifyMultiplicativeZero() {
+      return this;
+   }
 }

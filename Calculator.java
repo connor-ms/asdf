@@ -25,7 +25,8 @@ public class Calculator
             Operation op = this.parser.parse();
             if (op != null)
             {
-               System.out.println(op + " => " + op.evaluate(this.bindings));
+               Operation simpleOp = op.simplifyAdditiveIdentity().simplifyMultiplicativeIdentity().simplifyMultiplicativeZero();
+               System.out.println(op + " => " + simpleOp + " => " + op.evaluate(this.bindings));
             }
          }
          catch (InvalidOperationException exp)

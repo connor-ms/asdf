@@ -21,4 +21,16 @@ public class Assignment
    {
       return "set " + _id + " = " + _e;
    }
+
+   public Expression simplifyAdditiveIdentity() {
+      return this._e.simplifyAdditiveIdentity();
+   }
+   
+   public Expression simplifyMultiplicativeIdentity() {
+      return this._e.simplifyMultiplicativeIdentity();
+   }
+
+   public Expression simplifyMultiplicativeZero() {
+      return this._e.simplifyMultiplicativeZero();
+   }
 }

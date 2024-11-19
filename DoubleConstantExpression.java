@@ -16,4 +16,16 @@ public class DoubleConstantExpression
    {
       return val;
    }
+
+   public Expression simplifyAdditiveIdentity() {
+      return this;
+   }
+
+   public Expression simplifyMultiplicativeIdentity() {
+      return this;
+   }
+
+   public Expression simplifyMultiplicativeZero() {
+      return this;
+   }
 }

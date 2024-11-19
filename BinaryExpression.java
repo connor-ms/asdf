@@ -1,7 +1,7 @@
 public abstract class BinaryExpression implements Expression
 {
-    private Expression lft;
-    private Expression rht;
+    protected Expression lft;
+    protected Expression rht;
     private String operator;
 
     public BinaryExpression(Expression lft, Expression rht, String operator)

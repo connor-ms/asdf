@@ -10,4 +10,16 @@ public class SubtractExpression
    {
       return lft - rht;
    }
+
+   public Expression simplifyAdditiveIdentity() {
+      return new SubtractExpression(lft.simplifyAdditiveIdentity(), rht.simplifyAdditiveIdentity());
+   }
+
+   public Expression simplifyMultiplicativeIdentity() {
+      return new SubtractExpression(lft.simplifyMultiplicativeIdentity(), rht.simplifyMultiplicativeIdentity());
+   }
+
+   public Expression simplifyMultiplicativeZero() {
+      return new SubtractExpression(lft.simplifyMultiplicativeZero(), rht.simplifyMultiplicativeZero());
+   }
 }

@@ -17,5 +17,16 @@ public class IdentifierExpression
    {
       return bindings.lookupBinding(id);
    }
-}
 
+   public Expression simplifyAdditiveIdentity() {
+      return this;
+   }
+   
+   public Expression simplifyMultiplicativeIdentity() {
+      return this;
+   }
+
+   public Expression simplifyMultiplicativeZero() {
+      return this;
+   }
+}
